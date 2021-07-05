@@ -1,19 +1,24 @@
 {
-  "cities": [
+  "presents": [
+    {
+      "id": 1,
+      "name": "bottle",
+      "active": true
+    },
     {
       "id": 2,
-      "name": "Madrid",
+      "name": "diary",
       "active": false
     },
     {
       "id": 3,
-      "name": "Miami",
+      "name": "t-shirt",
       "active": true
     },
     {
-      "name": "dasd",
       "id": 4,
-      "active": false
+      "name": "mug",
+      "active": true
     }
   ],
   "courses": [
@@ -36,33 +41,6 @@
       "id": 4,
       "name": "UX/UI",
       "type": "Part Time"
-    }
-  ],
-  "bootcamps": [
-    {
-      "id": 2,
-      "cityId": 2,
-      "courseId": 2
-    },
-    {
-      "id": 3,
-      "cityId": 3,
-      "courseId": 1
-    },
-    {
-      "id": 4,
-      "cityId": 4,
-      "courseId": 2
-    },
-    {
-      "id": 5,
-      "cityId": 2,
-      "courseId": 3
-    },
-    {
-      "id": 6,
-      "cityId": 3,
-      "courseId": 4
     }
   ]
 }

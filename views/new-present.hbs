@@ -1,0 +1,13 @@
+<h1>Add new present</h1>
+
+<form action="/presents" method="POST">
+  <div class="mb-3">
+    <input type="text" value="{{present.name}}" class="form-control {{#if error}}is-invalid{{/if}}" id="name" name="name">
+    {{#if error}}
+      <div class="invalid-feedback">
+        {{error}}
+      </div>
+    {{/if}}
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
