@@ -1,0 +1,35 @@
+<h1>Presents</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {{#each presents as |present|}}
+    <div class="card-body">
+        <h5 class="card-title">{{present.name}}</h5>
+        <p class="card-text">Obtain this amazing
+        {{present.name}}. Or maybe not.</p>
+        <p class="operating-feedback" class="{{#unless present.active}}d-none{{/unless}}">Currently available</p>
+       {{#if present.active}}
+      <button
+        type="button"
+        value="disable"
+        id="{{present.id}}"
+        class="btn btn-secondary btn-activate-present"
+      >Disable present</button>
+      {{else}}
+      <button
+        type="button"
+        id="{{present.id}}"
+        value="activate"
+        class="btn btn-warning btn-activate-present"
+      >Activate present</button>
+        {{/if}}
+      <a href="/presents/{{present.id}}" class="btn btn-dark">Add present</a>
+      <button
+        type="button"
+        value="{{present.id}}"
+        class="btn btn-danger btn-delete-present"
+      >Delete present</button>
+    </div>
+  {{/each}}
+</div>
+
+<script src="/js/presents.js"></script>

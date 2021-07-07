@@ -4,14 +4,14 @@ const miscController = require('../controllers/misc.controller');
 // Home
 router.get('/', miscController.home);
 
-// Cities
-router.get('/cities', miscController.cities);
-router.post('/cities', miscController.doCreateCity);
-router.get('/cities/new', miscController.createCity);
-router.get('/cities/:id', miscController.getCity);
+// Regalos
+router.get('/presents', miscController.presents);
+router.post('/presents', miscController.doNewPresent);
+router.get('/presents/new', miscController.newPresent);
+router.get('/presents/:id', miscController.addPresent);
 
-// Courses
+// Cursos
 router.get('/courses', miscController.courses);
-router.get('/courses/:id', miscController.getCourse);
+router.get('/courses/:id', miscController.addCourse);
 
 module.exports = router;
