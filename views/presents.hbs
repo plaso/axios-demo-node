@@ -6,17 +6,19 @@
         <h5 class="card-title">{{present.name}}</h5>
         <p class="card-text">Obtain this amazing
         {{present.name}}. Or maybe not.</p>
-        {{#if present.active}}
-        <p>Currently available</p>
+        <p class="operating-feedback" class="{{#unless present.active}}d-none{{/unless}}">Currently available</p>
+       {{#if present.active}}
       <button
         type="button"
-        value="{{present.id}}"
+        value="disable"
+        id="{{present.id}}"
         class="btn btn-secondary btn-activate-present"
       >Disable present</button>
       {{else}}
       <button
         type="button"
-        value="{{present.id}}"
+        id="{{present.id}}"
+        value="activate"
         class="btn btn-warning btn-activate-present"
       >Activate present</button>
         {{/if}}
